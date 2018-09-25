@@ -1,4 +1,6 @@
-class Node {
+import java.util.Scanner;
+
+public class Node {
     Node left;
     Node right;
     int data;
@@ -10,7 +12,7 @@ class Node {
     }
 }
 
-class LCA{
+public class LCA{
 
   public static Node insert(Node root, int data) {
         if(root == null)
@@ -38,6 +40,29 @@ class LCA{
     }
 
   public static void main(String[] args){
+      Scanner scanner = new Scanner(System.in);
+      System.out.print("Enter the number of data that you want to find the lowest common ancestor to: ");
+      int n = scanner.nextInt();
+      Node root = null;
+      int count=1;
+      while(n-- > 0) {
+          System.out.print("Enter node "+ count + ": ");
+          count++;
+        int data = scanner.nextInt();
+        root = insert(root,data);
+      }
+
+      System.out.print("\nEnter the first node of the 2 nodes that you want to find the lowest common ancestor to: ");
+      int v = scanner.nextInt();
+      System.out.print("Enter the second node of the 2 nodes that you want to find the lowest common ancestor to: ");
+      int w = scanner.nextInt();
+
+      System.out.print("\nThe lowest common ancestor of the 2 nodes is: ");
+      Node result = lca(root, v, w);
+      System.out.println(result.data);
+
+
+      scanner.close();;
 
   }
 }
