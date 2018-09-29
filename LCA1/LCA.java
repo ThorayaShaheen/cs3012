@@ -17,6 +17,14 @@ public class LCA{
             return root;
         }
     }
+    
+    public static boolean find(Node root, int data){
+	    if(root == null) return false;
+	    if(root.data == data) return true;
+	    else if(find(root.left, data)) return true;
+	    else if (find(root.right, data)) return true;
+	    return false;
+    }
 
     public static Node lca(Node root, int v, int w){
         if((root.data < v) && (root.data < w))
