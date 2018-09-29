@@ -1,17 +1,5 @@
 import java.util.Scanner;
 
-public class Node {
-    Node left;
-    Node right;
-    int data;
-
-    Node(int data) {
-        this.data = data;
-        left = null;
-        right = null;
-    }
-}
-
 public class LCA{
 
   public static Node insert(Node root, int data) {
