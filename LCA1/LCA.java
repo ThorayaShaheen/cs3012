@@ -48,8 +48,8 @@ public class LCA{
       while(n-- > 0) {
           System.out.print("Enter node "+ count + ": ");
           count++;
-        int data = scanner.nextInt();
-        root = insert(root,data);
+          int data = scanner.nextInt();
+          root = insert(root,data);
       }
 
       System.out.print("\nEnter the first node of the 2 nodes that you want to find the lowest common ancestor to: ");
