@@ -28,20 +28,27 @@ public class LCATest {
 	        assertTrue(LCA.find(root, 7));
 	    }
 			@Test
- 	    public void lcaTest() {
- 	    		Node root = new Node(6);
- 	       // root = LCA.insert(root, root.data);
+	    public void lcaTest() {
+			 	 Node root = new Node(6);
 
- 	        	LCA.insert(root, 7);
- 	        	LCA.insert(root, 9);
- 	        	LCA.insert(root, 14);
- 	        	LCA.insert(root, 8);
- 	        	LCA.insert(root, 1);
- 	        	LCA.insert(root, 25);
- 	        	LCA.insert(root, 70);
+				 LCA.insert(root, 7);
+				 LCA.insert(root, 9);
+				 LCA.insert(root, 14);
+				 LCA.insert(root, 8);
+				 LCA.insert(root, 1);
+				 LCA.insert(root, 25);
+				 LCA.insert(root, 70);
 
- 	        	root.data = 9;
- 	        	Node result = LCA.lca(root, 9, 25);
- 	        	assertEquals(root.data,result);
- 	    }
+				 Node ancestor = LCA.lca(root, 9, 25);
+				 assertEquals(ancestor.data,9);
+
+				 ancestor = LCA.lca(root, 7, 70);
+				 assertEquals(ancestor.data,7);
+
+				 ancestor = LCA.lca(root, 14, 25);
+				 assertEquals(ancestor.data,14);
+
+				 ancestor = LCA.lca(root, 1, 7);
+				 assertEquals(ancestor.data,7);
+	 }
 }
