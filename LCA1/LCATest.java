@@ -30,7 +30,7 @@ public class LCATest {
 			@Test
 	    public void lcaTest() {
 			 	 Node root = new Node(6);
-
+				 LCA.insert(root, root.data);
 				 LCA.insert(root, 7);
 				 LCA.insert(root, 9);
 				 LCA.insert(root, 14);
@@ -49,6 +49,6 @@ public class LCATest {
 				 assertEquals(ancestor.data,14);
 
 				 ancestor = LCA.lca(root, 1, 7);
-				 assertEquals(ancestor.data,7);
+				 assertEquals(ancestor.data,6);
 	 }
 }
