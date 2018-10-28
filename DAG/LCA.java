@@ -14,6 +14,11 @@ public class LCA{
       }
     }
   }
+
+  public static void union(int u, int v) {
+    matrix[u-1][v-1] = 1;
+  }
+  
   public static Node insert(Node root, int data) {
         if(root == null)
             return new Node(data);
