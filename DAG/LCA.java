@@ -2,10 +2,18 @@ import java.util.Scanner;
 
 public class LCA{
 
-  static int [][] matrix;
+  public static int [][] matrix;
+	public static int n = 0;
 
-	static int n = 0;
-
+  public static void makeMatrix(int n) {
+    LCA.n = n;
+    matrix = new int [n][n];
+    for (int i=0; i<n; i++) {
+      for (int j=0; j<n; j++) {
+        matrix[i][j] = 0;
+      }
+    }
+  }
   public static Node insert(Node root, int data) {
         if(root == null)
             return new Node(data);
