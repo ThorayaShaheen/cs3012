@@ -33,7 +33,11 @@ public class LCA{
     LinkedList<Integer> visitedN = new LinkedList<Integer>();
 
     while (!q.isEmpty()) {
+      int current = q.peek();
+      q.remove();
 
+      visitedN.add(current);
+      visited[current] = true;
     }
 
 
