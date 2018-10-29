@@ -54,7 +54,16 @@ public class LCA{
   public static int lca(int src, int u, int v) {
     LinkedList<Integer> list1 = bfs(src,u);
     LinkedList<Integer> list2 = bfs(src,v);
-    
+
+    int node = -1;
+
+    for (int i=0; i<list1.size(); i++) {
+      for (int j=0; j<list2.size(); j++) {
+        if (list1.get(i) == list2.get(j))
+        node = i;
+      }
+    }
+    return node+1;
   }
 
   // public static Node insert(Node root, int data) {
