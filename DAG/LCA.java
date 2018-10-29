@@ -51,6 +51,12 @@ public class LCA{
     return visitedN;
   }
 
+  public static int lca(int src, int u, int v) {
+    LinkedList<Integer> list1 = bfs(src,u);
+    LinkedList<Integer> list2 = bfs(src,v);
+    
+  }
+
   // public static Node insert(Node root, int data) {
   //       if(root == null)
   //           return new Node(data);
