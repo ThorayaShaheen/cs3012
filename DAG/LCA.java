@@ -38,9 +38,17 @@ public class LCA{
 
       visitedN.add(current);
       visited[current] = true;
+
+      for (int i=0; i<n; i++) {
+        if (matrix[current][i] == 1 && !visited[i]) {
+          q.add(i);
+        }
+        if (current == dst) {
+          break;
+        }
+      }
     }
-
-
+    return visitedN;
   }
 
   // public static Node insert(Node root, int data) {
